@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/Imagenes/logo_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - Gym Management</title>
+    <link rel="stylesheet" href="/Styles/server.css">
+    <link rel="stylesheet" href="/Styles/pagos.css">
+</head>
+<body>
+    <!-- Hamburger Button for mobile view -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <div class="sidebar" id="sidebar">
+        <h2>Gym Management</h2>
+        <ul>
+            <li><a href="/dashboard">🏠 Dashboard</a></li>
+            <li><a href="/clientes">👥 Clientes</a></li>
+            <li><a href="/pagos">💵 Pagos</a></li>
+            <li><a href="/configuracion">⚙️ Configuración</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1><span role="img" aria-label="Dinero">💰</span> Flujo de Dinero</h1>
+        </header>
+
+        <div class="payments-section">
+            <div class="total-revenue">
+                <h2><span role="img" aria-label="Billetes">💵</span> Total Recaudado</h2>
+                <p><span id="total-week">Semana: </span><span class="revenue-value" id="week-revenue">$500</span></p>
+                <p><span id="total-month">Mes: </span><span class="revenue-value" id="month-revenue">$2000</span></p>
+                <p><span id="total-year">Año: </span><span class="revenue-value" id="year-revenue">$24000</span></p>
+                <p><span id="total-all">Total General: </span><span class="revenue-value" id="total-revenue-all">$50000</span></p>
+                <button id="toggle-revenue" onclick="toggleRevenue()">🔒 Ocultar/Mostrar Dinero</button>
+            </div>
+
+            <div class="revenue-details">
+                <h3><span role="img" aria-label="Detalles">📊</span> Detalles de los Ingresos</h3>
+                <ul>
+                    <li><strong>Usuarios Inscritos:</strong> 150 <span role="img" aria-label="Usuarios">👥</span></li>
+                    <li><strong>Tarifa de Membresía:</strong> $50 <span role="img" aria-label="Tarifa">💳</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to toggle sidebar and hamburger menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+
+        // Toggle the sidebar when clicking the hamburger button
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click from propagating to the body
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar if clicking outside the sidebar categories
+        document.body.addEventListener('click', (event) => {
+            // Check if the click was outside the sidebar but not the hamburger button
+            if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Prevent the sidebar from closing when clicking inside it
+        sidebar.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+    
+    <script>
+        function toggleRevenue() {
+            const revenueElements = document.querySelectorAll('.revenue-value');
+            revenueElements.forEach(element => {
+                if (element.innerText === "****") {
+                    element.innerText = element.dataset.value;
+                } else {
+                    element.innerText = "****";
+                }
+            });
+        }
+
+        // Al cargar la página, asignamos los valores originales a los elementos
+        document.querySelectorAll('.revenue-value').forEach(element => {
+            element.dataset.value = element.innerText; // Guardamos el valor original
+        });
+    </script>
+</body>
+</html>

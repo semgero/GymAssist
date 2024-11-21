@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0073e6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.compra-container {
+    max-width: 450px;
+    width: 90%;
+    background-color: #fff;
+    padding: 30px; /* Aumenté el padding para que haya más espacio alrededor */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.purchase-template h2 {
+    font-size: 23px;
+    color: #007be6;
+    margin-top: 20px;
+}
+
+.purchase-template p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6600; /* Color llamativo para resaltar el precio */
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 24px;
+    color: #007be6; /* Color más destacado para el valor del precio */
+}
+
+.payment-form {
+    margin-top: 15px;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 20px; /* Aumenté el padding en la parte interna del formulario */
+    border-radius: 8px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+}
+
+.payment-form h3 {
+    font-size: 18px;
+    color: #0073e6;
+    margin-bottom: 15px;
+}
+
+.payment-form input {
+    width: 100%; /* Ancho completo para los inputs */
+    padding: 12px; /* Aumenté el padding dentro de los inputs */
+    margin: 10px 0; /* Aumenté el margen entre los inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del input */
+}
+
+.payment-form input:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+.buy-button {
+    background-color: #0073e6;
+    color: white;
+    padding: 12px 18px; /* Ajusta el padding del botón */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%; /* Hace que el botón ocupe el 100% del ancho disponible */
+}
+
+.buy-button:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .compra-container {
+        width: 90%;
+        padding: 25px; /* Ajuste del padding para pantallas más pequeñas */
+    }
+
+    .payment-form h3 {
+        font-size: 16px;
+    }
+
+    .payment-form input {
+        font-size: 13px;
+        padding: 10px; /* Ajuste del padding para los inputs */
+    }
+
+    .buy-button {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+}
