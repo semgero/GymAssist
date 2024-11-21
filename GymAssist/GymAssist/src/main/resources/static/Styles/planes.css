@@ -1,9 +1,5 @@
 :root {
-    /*========== Colors ==========*/
-    /* Change favorite color - Blue 210 - Purple 250 - Green 142 - Pink 340*/
     --hue-color: 210;
-  
-    /* HSL color mode */
     --first-color: hsl(var(--hue-color), 96%, 54%);
     --first-color-light: hsl(var(--hue-color), 96%, 69%);
     --first-color-alt: hsl(var(--hue-color), 96%, 37%);
@@ -14,8 +10,6 @@
     --white-color: #FFF;
     --body-color: hsl(var(--hue-color), 100%, 99%);
     --container-color: #FFF;
-  
-    /*========== Font and typography ==========*/
     --body-font: 'Lato', sans-serif;
     --pricing-font: 'Rubik', sans-serif;
     --biggest-font-size: 1.75rem;
@@ -24,8 +18,6 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
     --tiny-font-size: .625rem;
-  
-    /*========== Margenes Bottom ==========*/
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-1: 1rem;
@@ -44,8 +36,6 @@
       --tiny-font-size: .688rem;
     }
   }
-  
-  /*==================== BASE ====================*/
   * {
     box-sizing: border-box;
     padding: 0;
@@ -65,8 +55,7 @@
     max-width: 100%;
     height: auto;
   }
-  
-  /*==================== REUSABLE CSS CLASSES ====================*/
+
   .container {
     max-width: 1024px;
     margin-left: var(--mb-1-5);
@@ -77,7 +66,6 @@
     display: grid;
   }
   
-  /*==================== CARD PRICING ====================*/
   .card {
     padding: 3rem 0;
   }
@@ -213,8 +201,6 @@
     box-shadow: 0 12px 24px hsla(var(--hue-color), 97%, 54%, 0.2);
   }
   
-  /*==================== MEDIA QUERIES ====================*/
-  /* For small devices */
   @media screen and (max-width: 320px) {
     .container {
       margin-left: var(--mb-1);
@@ -226,7 +212,6 @@
     }
   }
   
-  /* For medium devices */
   @media screen and (min-width: 568px) {
     .card__container {
       grid-template-columns: repeat(2, 1fr);
@@ -239,7 +224,6 @@
     }
   }
   
-  /* For large devices */
   @media screen and (min-width: 968px) {
     .container {
       margin-left: auto;

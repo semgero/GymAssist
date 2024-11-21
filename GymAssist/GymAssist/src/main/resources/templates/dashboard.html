@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/Styles/dashboard.css">
 </head>
 <body>
-    <!-- Sidebar -->
+    
     <div class="sidebar">
         <h2>Gym Management</h2>
         <ul>
@@ -20,13 +20,13 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
+    
     <div class="main-content">
         <header>
             <h1>Dashboard</h1>
         </header>
 
-        <!-- Stats Section -->
+        
         <div class="dashboard-stats">
             <div class="stat-card">
                 <img src="https://cdn.icon-icons.com/icons2/212/PNG/256/Users256_25013.png" alt="Usuarios Activos" class="stat-icon">
@@ -55,21 +55,21 @@
     </div>
 
 
-    <!-- Hamburger Button for mobile view -->
+    
     <div class="hamburger" id="hamburger">&#9776;</div>
 
-    <!-- JavaScript to toggle sidebar and hamburger menu -->
+    
     <script>
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.querySelector('.sidebar');
         const mainContent = document.querySelector('.main-content');
 
-        // Toggle sidebar on hamburger click
+        
         hamburger.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
 
-        // Close sidebar if clicked outside
+        
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
                 sidebar.classList.remove('active');

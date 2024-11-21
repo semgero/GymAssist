@@ -7,9 +7,10 @@
     <title>Configuración - Gym Management</title>
     <link rel="stylesheet" href="/Styles/server.css">
     <link rel="stylesheet" href="/Styles/configuracion.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <!-- Hamburger Button for mobile view -->
     <div class="hamburger" id="hamburger">&#9776;</div>
 
     <div class="sidebar" id="sidebar">
@@ -29,7 +30,7 @@
 
         <div class="config-form">
             <h2>Configuración de la Cuenta Administrativa</h2>
-            <!-- Mostrar mensaje de error o éxito -->
+            
             <div>
                 <span th:if="${error}" th:text="${error}" class="error-message"></span>
                 <span th:if="${success}" th:text="${success}" class="success-message"></span>
@@ -48,24 +49,24 @@
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="submit-btn">Guardar Cambios</button>
+                    <button type="submit" class="submit-btn" >Guardar Cambios</button>
                 </div>
             </form>                            
         </div>
     </div>
 
-    <!-- JavaScript to toggle sidebar and hamburger menu -->
+   
     <script>
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
 
-        // Toggle the sidebar when clicking the hamburger button
+        
         hamburger.addEventListener('click', (event) => {
             event.stopPropagation();
             sidebar.classList.toggle('active');
         });
 
-        // Close sidebar if clicking outside the sidebar categories
+        
         document.body.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
@@ -76,6 +77,6 @@
             event.stopPropagation();
         });
     </script>
-
+<script src="alerts.js"></script>
 </body>
 </html>

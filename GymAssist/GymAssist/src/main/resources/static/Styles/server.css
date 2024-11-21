@@ -12,7 +12,6 @@ body {
     color: #000000;
 }
 
-/* Estilo para la scrollbar */
 .main-content::-webkit-scrollbar {
     width: 10px;
     background: #021b79;
@@ -25,7 +24,6 @@ body {
 }
 
 
-/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #0058cc;
@@ -39,7 +37,6 @@ body {
     z-index: 10;
 }
 
-/* Titulo del Sidebar */
 .sidebar h2 {
     color: #ffffff;
     font-size: 24px;
@@ -73,12 +70,11 @@ body {
 .main-content {
     flex: 1;
     padding: 30px;
-    margin-left: 250px; /* Dejamos espacio para el sidebar */
+    margin-left: 250px; 
     overflow-y: auto;
     transition: margin-left 0.3s ease-in-out;
 }
 
-/* Botón de crear gimnasio */
 .create-gym-btn {
     background-color: #00adb5;
     border: none;
@@ -133,7 +129,6 @@ body {
     color: #009fa2;
 }
 
-/* Modal */
 .modal {
     position: fixed;
     top: 0;
@@ -173,7 +168,6 @@ body {
     font-size: 16px;
 }
 
-/* Estilos de los botones */
 .submit-btn {
     background-color: #00adb5;
     border: none;
@@ -204,27 +198,23 @@ body {
     color: #00adb5;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
-    /* Sidebar se oculta por defecto en pantallas pequeñas */
     .sidebar {
         width: 250px;
         position: fixed;
         top: 0;
-        left: -250px; /* Inicialmente oculto */
+        left: -250px; 
         transition: all 0.3s ease-in-out;
     }
 
     .sidebar.active {
-        left: 0; /* Muestra el sidebar cuando tiene la clase 'active' */
+        left: 0; 
     }
 
-    /* Cambiar contenido principal cuando el sidebar esté oculto */
     .main-content {
-        margin-left: 0; /* Eliminar margen para móviles */
+        margin-left: 0; 
     }
 
-    /* Ajustar el botón de crear gimnasio para móviles */
     .create-gym-btn {
         font-size: 28px;
         width: 50px;
@@ -232,7 +222,6 @@ body {
     }
 }
 
-/* Botón de hamburger */
 .hamburger {
     display: none;
     font-size: 30px;
@@ -243,7 +232,6 @@ body {
     left: 20px;
 }
 
-/* Hacer visible el botón de hamburguesa en pantallas pequeñas */
 @media (max-width: 768px) {
     .hamburger {
         display: block;

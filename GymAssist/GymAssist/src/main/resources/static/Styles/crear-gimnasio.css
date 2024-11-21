@@ -1,4 +1,4 @@
-/* Estilos Generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
 body {
     display: flex;
     height: 100vh;
-    background-color: #f4f6fc;  /* Azul muy claro */
+    background-color: #f4f6fc;  
     color: #333;
     flex-direction: column;
 }
@@ -25,10 +25,10 @@ body {
     border-right: 2px solid #021b79;
 }
 
-/* Barra lateral */
+
 .sidebar {
     width: 250px;
-    background-color: #007bff;  /* Azul brillante */
+    background-color: #007bff;  
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -39,7 +39,7 @@ body {
 }
 
 .sidebar h2 {
-    color: #ffffff;  /* Blanco */
+    color: #ffffff;  
     font-size: 24px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -91,9 +91,9 @@ header h1 {
     color: #007bff;  
 }
 
-/* Sección Crear Gimnasio */
+
 .create-gym-section {
-    background-color: #ffffff;  /* Blanco para mayor contraste */
+    background-color: #ffffff;  
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -104,30 +104,30 @@ header h1 {
 
 .create-gym-section h2 {
     font-size: 28px;
-    color: #007bff;  /* Azul brillante */
+    color: #007bff;  
     margin-bottom: 20px;
 }
 
 .create-gym-section p {
     font-size: 18px;
-    color: #333;  /* Gris oscuro */
+    color: #333;  
     margin-bottom: 20px;
 }
 
 #create-gym-btn {
-    background-color: #007bff;  /* Azul brillante */
+    background-color: #007bff;  
     color: white;
-    font-size: 24px;  /* Reducido para que se vea mejor */
+    font-size: 24px;  
     padding: 20px 40px;
-    border-radius: 10px;  /* Bordes redondeados */
+    border-radius: 10px;  
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
-    margin-top: 20px;  /* Separación superior */
+    margin-top: 20px;  
 }
 
 #create-gym-btn:hover {
-    background-color: #0058cc;  /* Azul más oscuro */
+    background-color: #0058cc;  
     transform: scale(1.05);  
     transition: 0.4s;
 }
@@ -136,7 +136,7 @@ header h1 {
     outline: none;
 }
 
-/* Estilos del menú hamburguesa */
+
 .hamburger {
     display: none;
     flex-direction: column;

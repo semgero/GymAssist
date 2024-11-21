@@ -14,22 +14,22 @@ public class CrearServerService {
     @Autowired
     private CrearServerRepository repository;
 
-    // Crear un nuevo gimnasio
+    
     public CrearServer crearGimnasio(CrearServer gimnasio) {
         return repository.save(gimnasio);
     }
 
-    // Listar todos los gimnasios
+    
     public List<CrearServer> listarGimnasios() {
         return repository.findAll();
     }
 
-    // Obtener gimnasio por ID
+    
     public Optional<CrearServer> obtenerGimnasio(Long id) {
         return repository.findById(id);
     }
 
-    // Eliminar un gimnasio
+    
     public void eliminarGimnasio(Long id) {
         repository.deleteById(id);
     }

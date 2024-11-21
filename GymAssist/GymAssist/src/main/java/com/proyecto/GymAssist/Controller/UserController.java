@@ -15,33 +15,33 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // Método para cambiar la contraseña de un usuario
+    
     @PostMapping("/configuracion/cambiar-contrasena")
     public String updatePassword(@RequestParam String email,
                                  @RequestParam String newPassword,
                                  @RequestParam String confirmPassword,
                                  Model model) {
-        // Verificamos que las contraseñas coincidan
+        
         if (!newPassword.equals(confirmPassword)) {
             model.addAttribute("error", "Las contraseñas no coinciden.");
-            return "configuracion";  // Retorna a la vista con mensaje de error
+            return "configuracion";  
         }
 
-        // Buscamos al usuario por su correo electrónico
+       
         User user = userService.findUserByEmail(email);
 
-        // Si no se encuentra el usuario, mostramos un mensaje de error
+       
         if (user == null) {
             model.addAttribute("error", "No se encontró un usuario con ese correo.");
-            return "configuracion";  // Retorna a la vista con mensaje de error
+            return "configuracion"; 
         }
 
-        // Actualizamos la contraseña
-        user.setPassword(newPassword); // **Usa hash en producción**
+        
+        user.setPassword(newPassword); 
         userService.updateUser(user);
 
         model.addAttribute("success", "Contraseña actualizada correctamente.");
-        return "configuracion";  // Retorna con mensaje de éxito
+        return "configuracion";  
     }
 
     @PostMapping("/login")
@@ -67,7 +67,7 @@ public class UserController {
         User user = new User();
         user.setUsername(username);
         user.setEmail(email);
-        user.setPassword(password); // **Usa hash en producción**
+        user.setPassword(password); 
 
         userService.register(user);
 

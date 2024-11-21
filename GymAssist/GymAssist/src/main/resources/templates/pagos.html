@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/Imagenes/logo_icon.png">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/Styles/pagos.css">
 </head>
 <body>
-    <!-- Hamburger Button for mobile view -->
+    
     <div class="hamburger" id="hamburger">&#9776;</div>
 
     <div class="sidebar" id="sidebar">
@@ -30,43 +30,33 @@
         <div class="payments-section">
             <div class="total-revenue">
                 <h2><span role="img" aria-label="Billetes">💵</span> Total Recaudado</h2>
-                <p><span id="total-week">Semana: </span><span class="revenue-value" id="week-revenue">$500</span></p>
-                <p><span id="total-month">Mes: </span><span class="revenue-value" id="month-revenue">$2000</span></p>
-                <p><span id="total-year">Año: </span><span class="revenue-value" id="year-revenue">$24000</span></p>
-                <p><span id="total-all">Total General: </span><span class="revenue-value" id="total-revenue-all">$50000</span></p>
+                
+                <p><span id="total-all">Total General: </span><span class="revenue-value" id="total-revenue-all" th:text="${totalRecaudado}"></span></p>
                 <button id="toggle-revenue" onclick="toggleRevenue()">🔒 Ocultar/Mostrar Dinero</button>
-            </div>
-
-            <div class="revenue-details">
-                <h3><span role="img" aria-label="Detalles">📊</span> Detalles de los Ingresos</h3>
-                <ul>
-                    <li><strong>Usuarios Inscritos:</strong> 150 <span role="img" aria-label="Usuarios">👥</span></li>
-                    <li><strong>Tarifa de Membresía:</strong> $50 <span role="img" aria-label="Tarifa">💳</span></li>
-                </ul>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript to toggle sidebar and hamburger menu -->
+    
     <script>
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
 
-        // Toggle the sidebar when clicking the hamburger button
+        
         hamburger.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the click from propagating to the body
+            event.stopPropagation(); 
             sidebar.classList.toggle('active');
         });
 
-        // Close sidebar if clicking outside the sidebar categories
+        
         document.body.addEventListener('click', (event) => {
-            // Check if the click was outside the sidebar but not the hamburger button
+           
             if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
             }
         });
 
-        // Prevent the sidebar from closing when clicking inside it
+        
         sidebar.addEventListener('click', (event) => {
             event.stopPropagation();
         });
@@ -84,9 +74,9 @@
             });
         }
 
-        // Al cargar la página, asignamos los valores originales a los elementos
+        
         document.querySelectorAll('.revenue-value').forEach(element => {
-            element.dataset.value = element.innerText; // Guardamos el valor original
+            element.dataset.value = element.innerText; 
         });
     </script>
 </body>

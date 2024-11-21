@@ -11,14 +11,14 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background: rgba(0, 51, 102, 0.9); /* Fondo azul oscuro con opacidad */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    background: rgba(0, 51, 102, 0.9); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: background 0.3s ease; /* Transición suave para el cambio de fondo */
+    transition: background 0.3s ease; 
 }
 
 
@@ -36,7 +36,7 @@ header {
     font-size: 24px;
     font-weight: bold;
     margin-left: 10px;
-    color: #fff; /* Color del texto del logo */
+    color: #fff; 
 }
 
 nav ul {
@@ -52,16 +52,16 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* Color del texto de los enlaces */
-    padding: 5px 10px; /* Añadido para mejor espacio alrededor del texto */
-    border-radius: 5px; /* Esquinas redondeadas en los enlaces */
-    transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
 }
 
 
 nav ul li a.active {
-    background-color: #3498DB; /* Color del enlace activo */
-    border-radius: 5px; /* Esquinas redondeadas en el enlace activo */
+    background-color: #3498DB; 
+    border-radius: 5px; 
 }
 
 main {
@@ -155,7 +155,7 @@ footer {
 }
 
 .footer-logo {
-    width: 120px; /* Ajusta el tamaño del logo según tus necesidades */
+    width: 120px; 
     height: auto;
 }
 
@@ -209,14 +209,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* Estilos para tabletas /
-  body {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1024px) {
-  / Estilos para pantallas grandes */
   body {
     font-size: 20px;
   }

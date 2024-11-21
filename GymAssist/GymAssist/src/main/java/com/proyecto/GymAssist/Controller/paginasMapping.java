@@ -70,7 +70,7 @@ public class paginasMapping {
         return "server"; // Esto busca la plantilla en templates/server.html
     }
 
-    @GetMapping("/pagos")
+    @GetMapping("/pagospagina")
     public String pagos() {
         return "pagos"; // Esto busca la plantilla en templates/pagos.html
     }

@@ -1,4 +1,4 @@
-/* Contenedor del formulario */
+
 form {
     background-color: #f9f9f9;
     border-radius: 12px;
@@ -47,7 +47,7 @@ form select {
     cursor: pointer;
 }
 
-/* Botones */
+
 .form-actions {
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@ form select {
     text-decoration: none;
 }
 
-/* Botón de guardar */
+
 .action-btn {
     background: linear-gradient(135deg, #28a745, #218838);
     color: #fff;
@@ -79,7 +79,7 @@ form select {
     transform: translateY(-2px);
 }
 
-/* Botón de cancelar */
+
 .delete-btn {
     background: linear-gradient(135deg, #dc3545, #c82333);
     color: #fff;
@@ -90,7 +90,7 @@ form select {
     transform: translateY(-2px);
 }
 
-/* Animación */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -102,7 +102,7 @@ form select {
     }
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
     form {
         padding: 20px;

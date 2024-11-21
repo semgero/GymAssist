@@ -10,7 +10,7 @@ import java.util.List;
 public class ClienteService {
 
     private final ClienteRepository clienteRepository;
-    private int usuariosRetirados = 0; // Contador para usuarios retirados
+    private int usuariosRetirados = 0; 
 
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;

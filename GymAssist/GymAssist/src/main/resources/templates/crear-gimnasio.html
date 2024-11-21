@@ -11,13 +11,13 @@
     <div class="sidebar">
         <h2>Gym Management</h2>
         <ul>
-            <!-- Solo el botón de "Crear Gimnasio" visible -->
+           
             <li><a href="/crearserver" id="crear-gimnasio-btn">🏋️‍♂️ Crear Gimnasio</a></li>
         </ul>
     </div>
 
     <div class="main-content">
-        <!-- Menú hamburguesa -->
+       
         <div id="hamburger" class="hamburger">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -37,17 +37,17 @@
     </div>
 
     <script>
-        // Obtener elementos
+        
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.querySelector('.sidebar');
         const mainContent = document.querySelector('.main-content');
 
-        // Toggle sidebar on hamburger click
+       
         hamburger.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
 
-        // Close sidebar if clicked outside
+        
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
                 sidebar.classList.remove('active');

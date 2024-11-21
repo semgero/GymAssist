@@ -1,6 +1,6 @@
-/* Estilo para la sección de configuración */
+
 .config-form {
-    background-color: #333; /* Fondo oscuro similar al de agregar clientes */
+    background-color: #333; 
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,7 @@
 
 .config-form label {
     font-size: 18px;
-    color: #fff; /* Cambiar a blanco para que sea visible sobre el fondo oscuro */
+    color: #fff; 
     display: block;
     margin-bottom: 8px;
 }
@@ -27,11 +27,11 @@
 .config-form input, .config-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #444; /* Fondo oscuro sin borde blanco */
+    border: 1px solid #444; 
     border-radius: 5px;
     font-size: 16px;
-    color: #a1a1a1; /* El texto en campos de entrada es gris oscuro */
-    background-color: #444; /* Fondo oscuro en los campos */
+    color: #a1a1a1; 
+    background-color: #444; 
 }
 
 .config-form textarea {

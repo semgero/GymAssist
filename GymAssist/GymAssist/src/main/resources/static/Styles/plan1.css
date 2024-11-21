@@ -14,7 +14,7 @@ body {
     max-width: 450px;
     width: 90%;
     background-color: #fff;
-    padding: 30px; /* Aumenté el padding para que haya más espacio alrededor */
+    padding: 30px; 
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -35,23 +35,23 @@ body {
 .price {
     font-size: 20px;
     font-weight: bold;
-    color: #ff6600; /* Color llamativo para resaltar el precio */
+    color: #ff6600; 
     margin: 20px 0;
 }
 
 .price span {
     font-size: 24px;
-    color: #007be6; /* Color más destacado para el valor del precio */
+    color: #007be6; 
 }
 
 .payment-form {
     margin-top: 15px;
     text-align: left;
     background-color: #f9f9f9;
-    padding: 20px; /* Aumenté el padding en la parte interna del formulario */
+    padding: 20px;
     border-radius: 8px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+    box-sizing: border-box; 
+    width: 100%; 
 }
 
 .payment-form h3 {
@@ -61,14 +61,14 @@ body {
 }
 
 .payment-form input {
-    width: 100%; /* Ancho completo para los inputs */
-    padding: 12px; /* Aumenté el padding dentro de los inputs */
-    margin: 10px 0; /* Aumenté el margen entre los inputs */
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s ease;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del input */
+    box-sizing: border-box; 
 }
 
 .payment-form input:focus {
@@ -79,12 +79,12 @@ body {
 .buy-button {
     background-color: #0073e6;
     color: white;
-    padding: 12px 18px; /* Ajusta el padding del botón */
+    padding: 12px 18px; 
     border: none;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    width: 100%; /* Hace que el botón ocupe el 100% del ancho disponible */
+    width: 100%; 
 }
 
 .buy-button:hover {
@@ -94,7 +94,7 @@ body {
 @media (max-width: 768px) {
     .compra-container {
         width: 90%;
-        padding: 25px; /* Ajuste del padding para pantallas más pequeñas */
+        padding: 25px; 
     }
 
     .payment-form h3 {
@@ -103,7 +103,7 @@ body {
 
     .payment-form input {
         font-size: 13px;
-        padding: 10px; /* Ajuste del padding para los inputs */
+        padding: 10px; 
     }
 
     .buy-button {

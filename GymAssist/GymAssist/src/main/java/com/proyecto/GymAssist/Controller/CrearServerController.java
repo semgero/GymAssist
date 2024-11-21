@@ -17,12 +17,12 @@ public class CrearServerController {
     @GetMapping
     public String listarGimnasios(Model model) {
         model.addAttribute("gimnasios", crearServerRepository.findAll());
-        return "listar-gimnasios"; // Página HTML para mostrar la lista de gimnasios
+        return "listar-gimnasios"; 
     }
 
     @GetMapping("/nuevo")
     public String mostrarFormularioCrearGimnasio() {
-        return "crearserver"; // Nombre del archivo HTML que has proporcionado
+        return "crearserver"; 
     }
 
     @PostMapping

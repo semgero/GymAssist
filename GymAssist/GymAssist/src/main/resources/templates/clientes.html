@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/Styles/clientes.css">
 </head>
 <body>
-    <!-- Hamburger Button for mobile view -->
     <div class="hamburger" id="hamburger">&#9776;</div>
 
     <div class="sidebar" id="sidebar">
@@ -67,26 +66,26 @@
         </div>
     </div>
 
-    <!-- JavaScript to toggle sidebar and hamburger menu -->
+   
     <script>
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
 
-        // Toggle the sidebar when clicking the hamburger button
+        
         hamburger.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the click from propagating to the body
+            event.stopPropagation(); 
             sidebar.classList.toggle('active');
         });
 
-        // Close sidebar if clicking outside the sidebar categories
+        
         document.body.addEventListener('click', (event) => {
-            // Check if the click was outside the sidebar but not the hamburger button
+            
             if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
             }
         });
 
-        // Prevent the sidebar from closing when clicking inside it
+        
         sidebar.addEventListener('click', (event) => {
             event.stopPropagation();
         });

@@ -1,4 +1,4 @@
-/* General */
+
 #menu {
     margin-left: 120px;
 }
@@ -29,7 +29,7 @@
     font-size: 35px;
 }
 
-/* Grid para los ejercicios */
+
 .ejercicio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,8 +44,8 @@
 }
 
 .ejercicio-item img {
-    width: 400px; /* Ancho ajustado */
-    height: 300px; /* Altura ajustada */
+    width: 400px; 
+    height: 300px; 
 }
 
 .ejercicio-item p {
@@ -54,7 +54,7 @@
     color: black;
 }
 
-/* Texto de repeticiones */
+
 #reps {
     color: black;
     text-align: center;
@@ -63,7 +63,7 @@
     padding-bottom: 2in;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .ejercicio-grid {
         grid-template-columns: 1fr;
