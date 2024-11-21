@@ -32,7 +32,7 @@
                 <img src="https://cdn.icon-icons.com/icons2/212/PNG/256/Users256_25013.png" alt="Usuarios Activos" class="stat-icon">
                 <div>
                     <h2>Usuarios Activos</h2>
-                    <p>Total de Usuarios Activos: <span>150</span></p>
+                    <p>Total de Usuarios Activos: <span th:text="${usuariosActivos}">0</span></p>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                 <img src="https://static.vecteezy.com/system/resources/previews/015/129/898/non_2x/lock-user-icon-png.png" alt="Usuarios Retirados" class="stat-icon">
                 <div>
                     <h2>Usuarios Retirados</h2>
-                    <p>Total de Usuarios Retirados: <span>25</span></p>
+                    <p>Total de Usuarios Retirados: <span th:text="${usuariosRetirados}">0</span></p>
                 </div>
             </div>
 
@@ -48,24 +48,12 @@
                 <img src="https://cdn-icons-png.freepik.com/512/6708/6708989.png" alt="Usuarios Ingresados" class="stat-icon">
                 <div>
                     <h2>Usuarios totales ingresados</h2>
-                    <p>Total de Usuarios Ingresados: <span>200</span></p>
+                    <p>Total de Usuarios Ingresados: <span th:text="${usuariosTotales}">0</span></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal (opcional para futuras funcionalidades) -->
-    <div class="modal hidden" id="clientModal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Detalles del Cliente</h2>
-            <p>Nombre: Juan Pérez</p>
-            <p>Email: juanperez@gmail.com</p>
-            <p>Membresía: Básica</p>
-            <p>Último pago: 15 Octubre 2024</p>
-            <button class="submit-btn">Editar Cliente</button>
-        </div>
-    </div>
 
     <!-- Hamburger Button for mobile view -->
     <div class="hamburger" id="hamburger">&#9776;</div>

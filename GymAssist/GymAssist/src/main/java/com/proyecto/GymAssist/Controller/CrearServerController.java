@@ -1,53 +1,33 @@
 package com.proyecto.GymAssist.Controller;
 
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.proyecto.GymAssist.model.CrearServer;
-import com.proyecto.GymAssist.service.CrearServerService;
+import com.proyecto.GymAssist.repository.CrearServerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
-@Controller // Cambia RestController a Controller
+@Controller
 @RequestMapping("/gimnasios")
 public class CrearServerController {
 
     @Autowired
-    private CrearServerService servicio;
+    private CrearServerRepository crearServerRepository;
 
-    
-    @PostMapping
-    public ResponseEntity<CrearServer> crearGimnasio(@RequestBody CrearServer gimnasio) {
-        CrearServer nuevoGimnasio = servicio.crearGimnasio(gimnasio);
-        return ResponseEntity.ok(nuevoGimnasio); 
-    }
-
-    
     @GetMapping
-    public ResponseEntity<List<CrearServer>> listarGimnasios() {
-        List<CrearServer> gimnasios = servicio.listarGimnasios();
-        return ResponseEntity.ok(gimnasios);
+    public String listarGimnasios(Model model) {
+        model.addAttribute("gimnasios", crearServerRepository.findAll());
+        return "listar-gimnasios"; // Página HTML para mostrar la lista de gimnasios
     }
 
-    
-    @GetMapping("/{id}")
-    public ResponseEntity<CrearServer> obtenerGimnasio(@PathVariable Long id) {
-        Optional<CrearServer> gimnasio = servicio.obtenerGimnasio(id);
-        return gimnasio.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    @GetMapping("/nuevo")
+    public String mostrarFormularioCrearGimnasio() {
+        return "crearserver"; // Nombre del archivo HTML que has proporcionado
     }
 
-    
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarGimnasio(@PathVariable Long id) {
-        servicio.eliminarGimnasio(id);
-        return ResponseEntity.noContent().build(); 
+    @PostMapping
+    public String crearGimnasio(@ModelAttribute CrearServer crearServer) {
+        crearServerRepository.save(crearServer);
+        return "redirect:/clientes";
     }
 }

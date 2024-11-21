@@ -1,46 +1,59 @@
 package com.proyecto.GymAssist.model;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@Table(name = "gimnasios") // Nombre de la tabla en la base de datos
-public class CrearServer { // ¡Asegúrate de que este nombre coincida con el archivo!
+public class CrearServer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100)
     private String nombre;
-
-    @Column(nullable = false, length = 255)
     private String descripcion;
-
-    @Column(nullable = false)
     private Double precio;
 
-    @CreationTimestamp
-    @Column(updatable = false)
-    private LocalDateTime fechaCreacion;
-
-    @UpdateTimestamp
-    private LocalDateTime fechaActualizacion;
+    public CrearServer() {
+    }
 
     public CrearServer(String nombre, String descripcion, Double precio) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.precio = precio;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 }
