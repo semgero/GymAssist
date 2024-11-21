@@ -28,24 +28,29 @@
         </header>
 
         <div class="config-form">
-                <h2>Configuración de la Cuenta Administrativa</h2>
-                <form action="/configuracion" method="POST">
-                    <div class="form-group">
-                        <label for="admin-email">Correo Electrónico:</label>
-                        <input type="email" id="admin-email" name="admin-email" placeholder="admin@gym.com" value="${user.email}">
-                    </div>
-                    <div class="form-group">
-                        <label for="admin-password">Contraseña:</label>
-                        <input type="password" id="admin-password" name="admin-password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="repeat-password">Repetir Contraseña:</label>
-                        <input type="password" id="repeat-password" name="repeat-password" required>
-                    </div>
-                    <div class="form-actions">
-                        <button type="submit" class="submit-btn">Guardar Cambios</button>
-                    </div>
-                </form>                
+            <h2>Configuración de la Cuenta Administrativa</h2>
+            <!-- Mostrar mensaje de error o éxito -->
+            <div>
+                <span th:if="${error}" th:text="${error}" class="error-message"></span>
+                <span th:if="${success}" th:text="${success}" class="success-message"></span>
+            </div>
+            <form action="/configuracion/cconfiguracion" method="POST">
+                <div class="form-group">
+                    <label for="userEmail">Correo Electrónico:</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="usuario@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Nueva Contraseña:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Guardar Cambios</button>
+                </div>
+            </form>                            
         </div>
     </div>
 
@@ -56,20 +61,17 @@
 
         // Toggle the sidebar when clicking the hamburger button
         hamburger.addEventListener('click', (event) => {
-            // Prevent the click from propagating to the body
             event.stopPropagation();
             sidebar.classList.toggle('active');
         });
 
         // Close sidebar if clicking outside the sidebar categories
         document.body.addEventListener('click', (event) => {
-            // Check if the click was outside the sidebar but not the hamburger button
             if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
             }
         });
 
-        // Prevent the sidebar from closing when clicking inside it
         sidebar.addEventListener('click', (event) => {
             event.stopPropagation();
         });

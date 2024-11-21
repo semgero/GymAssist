@@ -10,6 +10,7 @@ import java.util.List;
 public class ClienteService {
 
     private final ClienteRepository clienteRepository;
+    private int usuariosRetirados = 0; // Contador para usuarios retirados
 
     public ClienteService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
@@ -28,6 +29,21 @@ public class ClienteService {
     }
 
     public void deleteCliente(Long id) {
-        clienteRepository.deleteById(id);
+        if (clienteRepository.existsById(id)) {
+            clienteRepository.deleteById(id);
+            usuariosRetirados++;
+        }
+    }
+
+    public int getUsuariosActivos() {
+        return (int) clienteRepository.count();
+    }
+
+    public int getUsuariosRetirados() {
+        return usuariosRetirados;
+    }
+
+    public int getUsuariosTotales() {
+        return getUsuariosActivos() + getUsuariosRetirados();
     }
 }
