@@ -34,10 +34,10 @@
                 <span th:if="${error}" th:text="${error}" class="error-message"></span>
                 <span th:if="${success}" th:text="${success}" class="success-message"></span>
             </div>
-            <form action="/configuracion/cconfiguracion" method="POST">
+            <form action="/configuracion/cambiar-contrasena" method="POST">
                 <div class="form-group">
-                    <label for="userEmail">Correo Electrónico:</label>
-                    <input type="email" id="userEmail" name="userEmail" placeholder="usuario@gmail.com" required>
+                    <label for="email">Correo Electrónico del Usuario:</label>
+                    <input type="email" id="email" name="email" placeholder="usuario@gmail.com" required>
                 </div>
                 <div class="form-group">
                     <label for="newPassword">Nueva Contraseña:</label>

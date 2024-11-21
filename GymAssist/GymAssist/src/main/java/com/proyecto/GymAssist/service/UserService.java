@@ -20,8 +20,16 @@ public class UserService {
 
     public Optional<User> login(String email, String password) {
         return userRepository.findByEmail(email)
-                .filter(user -> user.getPassword().equals(password));
+                .filter(user -> user.getPassword().equals(password)); // **Usa hash para comparar**
     }
 
-    
+    // Método para encontrar un usuario por su correo electrónico
+    public User findUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElse(null);
+    }
+
+    // Método para actualizar el usuario
+    public void updateUser(User user) {
+        userRepository.save(user);
+    }
 }
