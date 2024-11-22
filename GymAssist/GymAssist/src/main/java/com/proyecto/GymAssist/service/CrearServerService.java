@@ -1,12 +1,13 @@
 package com.proyecto.GymAssist.service;
 
-import com.proyecto.GymAssist.model.CrearServer;
-import com.proyecto.GymAssist.repository.CrearServerRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.proyecto.GymAssist.model.CrearServer;
+import com.proyecto.GymAssist.repository.CrearServerRepository;
 
 @Service
 public class CrearServerService {
@@ -30,7 +31,5 @@ public class CrearServerService {
     }
 
     
-    public void eliminarGimnasio(Long id) {
-        repository.deleteById(id);
-    }
+   
 }

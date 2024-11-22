@@ -7,22 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class paginasMapping {
     @GetMapping("/index")
     public String index() {
-        return "index"; // Esto busca la plantilla en templates/index.html
+        return "index"; 
     }
 
     @GetMapping("/planes")
     public String planes() {
-        return "planes"; // Esto busca la plantilla en templates/planes.html
+        return "planes"; 
     }
 
     @GetMapping("/login")
     public String login() {
-        return "login"; // Esto busca la plantilla en templates/login.html
+        return "login"; 
     }
 
     @GetMapping("/signup")
     public String signup() {
-        return "signup"; // Esto busca la plantilla en templates/signup.html
+        return "signup"; 
     }
 
     @GetMapping("/rutinas")
@@ -32,72 +32,72 @@ public class paginasMapping {
 
     @GetMapping("/pecho")
     public String pecho() {
-        return "pecho"; // Esto busca la plantilla en templates/pecho.html
+        return "pecho"; 
     }
 
     @GetMapping("/espalda")
     public String espalda() {
-        return "espalda"; // Esto busca la plantilla en templates/espalda.html
+        return "espalda"; 
     }
 
     @GetMapping("/bicep")
     public String bicep() {
-        return "bicep"; // Esto busca la plantilla en templates/bicep.html
+        return "bicep"; 
     }
 
     @GetMapping("/tricep")
     public String tricep() {
-        return "tricep"; // Esto busca la plantilla en templates/tricep.html
+        return "tricep"; 
     }
 
     @GetMapping("/femoral")
     public String femoral() {
-        return "femoral"; // Esto busca la plantilla en templates/femoral.html
+        return "femoral"; 
     }
 
     @GetMapping("/cuadricep")
     public String cuadricep() {
-        return "cuadricep"; // Esto busca la plantilla en templates/cuadricep.html
+        return "cuadricep"; 
     }
 
     @GetMapping("/crear-gimnasio")
     public String creargimnasio() {
-        return "crear-gimnasio"; // Esto busca la plantilla en templates/crear-gimnasio.html
+        return "crear-gimnasio"; 
     }
 
     @GetMapping("/server")
     public String server() {
-        return "server"; // Esto busca la plantilla en templates/server.html
+        return "server"; 
     }
 
     @GetMapping("/pagospagina")
     public String pagos() {
-        return "pagos"; // Esto busca la plantilla en templates/pagos.html
+        return "pagos"; 
     }
 
     @GetMapping("/plan1")
     public String plan1() {
-        return "plan1"; // Esto busca la plantilla en templates/plan1.html
+        return "plan1"; 
     }
 
     @GetMapping("/plan2")
     public String plan2() {
-        return "plan2"; // Esto busca la plantilla en templates/plan2.html
+        return "plan2"; 
     }
 
     @GetMapping("/plan3")
     public String plan3() {
-        return "plan3"; // Esto busca la plantilla en templates/plan3.html
+        return "plan3"; 
     }
 
     @GetMapping("/configuracion")
     public String configuracion() {
-        return "configuracion"; // Esto busca la plantilla en templates/configuracion.html
+        return "configuracion"; 
     }
 
     @GetMapping("/crearserver")
     public String crearserver() {
-        return "crearserver"; // Esto busca la plantilla en templates/crearserver.html
+        return "crearserver"; 
     }
 
 }

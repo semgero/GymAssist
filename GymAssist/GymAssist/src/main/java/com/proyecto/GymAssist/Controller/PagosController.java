@@ -1,14 +1,15 @@
 package com.proyecto.GymAssist.Controller;
 
-import com.proyecto.GymAssist.service.PagosService;
-import com.proyecto.GymAssist.repository.ClienteRepository;  // Importa el ClienteRepository
-import com.proyecto.GymAssist.model.Cliente;  // Importa la clase Cliente
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller;  
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.List;
+import com.proyecto.GymAssist.model.Cliente;
+import com.proyecto.GymAssist.repository.ClienteRepository;
+import com.proyecto.GymAssist.service.PagosService;
 
 @Controller
 public class PagosController {
